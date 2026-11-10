@@ -1,0 +1,50 @@
+
+name: Build VixxLauncher APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar configuracao
+        uses: actions/checkout@v4
+
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Configurar Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Baixar projeto do Google Drive
+        run: |
+          python -m pip install gdown
+          gdown --fuzzy "https://drive.google.com/file/d/1oGe1tOWYsSHr10p7Xu4fIkTuUHWSWeI5/view" -O VixxLauncher.zip
+
+      - name: Extrair projeto
+        run: |
+          mkdir project
+          unzip -q VixxLauncher.zip -d project
+
+      - name: Compilar APK
+        run: |
+          WRAPPER=$(find project -name gradlew -type f | head -n 1)
+          if [ -z "$WRAPPER" ]; then
+            echo "Gradle Wrapper nao encontrado"
+            exit 1
+          fi
+          cd "$(dirname "$WRAPPER")"
+          chmod +x gradlew
+          ./gradlew assembleDebug --stacktrace
+
+      - name: Disponibilizar APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: VixxLauncher-APK
+          path: project/**/build/outputs/apk/**/*.apk
+          if-no-files-found: error
