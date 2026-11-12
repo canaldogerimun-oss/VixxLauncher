@@ -47,7 +47,7 @@ jobs:
       - name: Baixar projeto do Google Drive
         run: |
           python -m pip install gdown
-          gdown "1cLvj3r7CX6YNEdl7KBpJtW2LsPL1OWMt" -O VixxLauncher.zip
+          gdown "1wNt4uCLJXChrdBxENFVarF1mVq2bhdRn" -O VixxLauncher.zip
 
       - name: Extrair projeto
         run: |
