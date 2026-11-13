@@ -60,10 +60,10 @@ Interface minimalista, futurista e inspirada na organização de softwares para 
 - [x] Definição da identidade visual.
 - [x] Desenvolvimento inicial do dashboard.
 - [x] Consolidação da nova interface.
-- [x] Revisão dos recursos e correções de compilação.
-- [x] Testes em diferentes dispositivos Android.
-- [x] Evolução das áreas de Mods, Skins e Biblioteca.
-- [x] Melhorias no sistema de controles.
+- [ ] Revisão dos recursos e correções de compilação.
+- [ ] Testes em diferentes dispositivos Android.
+- [ ] Evolução das áreas de Mods, Skins e Biblioteca.
+- [ ] Melhorias no sistema de controles.
 - [x] Builds estáveis e documentação.
 
 🛠️ Tecnologias
