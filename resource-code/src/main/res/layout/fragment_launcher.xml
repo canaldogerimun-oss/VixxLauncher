@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_menu_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vixx_deep_black"
+    tools:ignore="ContentDescription">
+
+    <View
+        android:id="@+id/neon_glow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.12"
+        android:background="@drawable/vixx_home_hero" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/sidebar_end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.165" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_panel_start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.725" />
+
+    <!-- VIXX navigation rail -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/launcherMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:background="@drawable/vixx_sidebar_panel"
+        android:paddingStart="@dimen/_7sdp"
+        android:paddingEnd="@dimen/_7sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sidebar_end_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/sidebar_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:fillViewport="false"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@id/sidebar_footer"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                    android:id="@+id/aboutButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_39sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/vixx_nav_item_selected"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    app:ripple_for_relative="true">
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_menu_home"
+                        android:tint="@color/vixx_white_secondary" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_29sdp"
+                        android:text="Início"
+                        android:textColor="@color/vixx_white_secondary"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="bold" />
+                </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+
+                <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                    android:id="@+id/navPlayButton"
+                    style="@style/VixxSidebarItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_39sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/vixx_nav_item">
+                    <ImageView android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" style="@style/VixxSidebarIcon" android:src="@drawable/ic_vixx_play" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/VixxSidebarText" android:text="Jogar" />
+                </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+
+                <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                    android:id="@+id/navModsButton"
+                    style="@style/VixxSidebarItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_39sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/vixx_nav_item">
+                    <ImageView android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" style="@style/VixxSidebarIcon" android:src="@drawable/ic_profile_mods" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/VixxSidebarText" android:text="Mods" />
+                </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+
+                <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                    android:id="@+id/navSkinsButton"
+                    style="@style/VixxSidebarItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_39sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/vixx_nav_item">
+                    <ImageView android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" style="@style/VixxSidebarIcon" android:src="@drawable/ic_vixx_skin" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/VixxSidebarText" android:text="Skins" />
+                </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+
+                <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                    android:id="@+id/navAccountsButton"
+                    style="@style/VixxSidebarItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_39sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/vixx_nav_item">
+                    <ImageView android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" style="@style/VixxSidebarIcon" android:src="@drawable/ic_vixx_user" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/VixxSidebarText" android:text="Contas" />
+                </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+
+                <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                    android:id="@+id/navPerformanceButton"
+                    style="@style/VixxSidebarItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_39sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/vixx_nav_item">
+                    <ImageView android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" style="@style/VixxSidebarIcon" android:src="@drawable/ic_vixx_chart" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/VixxSidebarText" android:text="Desempenho" />
+                </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+
+                <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                    android:id="@+id/navCommunityButton"
+                    style="@style/VixxSidebarItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_39sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/vixx_nav_item">
+                    <ImageView android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" style="@style/VixxSidebarIcon" android:src="@drawable/ic_vixx_community" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/VixxSidebarText" android:text="Comunidade" />
+                </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+
+                <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                    android:id="@+id/navSettingsButton"
+                    style="@style/VixxSidebarItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_39sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/vixx_nav_item">
+                    <ImageView android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" style="@style/VixxSidebarIcon" android:src="@drawable/ic_menu_settings" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/VixxSidebarText" android:text="Configurações" />
+                </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/sidebar_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="#443F2370" />
+            <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                android:id="@+id/customControlButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                android:background="@drawable/vixx_nav_item"
+                android:paddingHorizontal="@dimen/_8sdp"
+                app:ripple_for_relative="true">
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_menu_custom_controls"
+                    android:tint="@color/vixx_neon_purple_light" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_27sdp"
+                    android:text="Editor HUD"
+                    android:textColor="@color/vixx_silver"
+                    android:textSize="@dimen/_9ssp" />
+            </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+            <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                android:id="@+id/installJarButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_27sdp"
+                android:background="@drawable/vixx_nav_item"
+                android:paddingHorizontal="@dimen/_7sdp"
+                app:ripple_for_relative="true">
+                <ImageView android:layout_width="@dimen/_15sdp" android:layout_height="@dimen/_15sdp" android:layout_alignParentStart="true" android:layout_centerVertical="true" android:src="@drawable/ic_java" android:tint="@color/vixx_neon_purple_light" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/_23sdp" android:text="Instalar .jar" android:textColor="@color/vixx_silver" android:textSize="@dimen/_8ssp" />
+            </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+            <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                android:id="@+id/shareLogsButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_27sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@drawable/vixx_nav_item"
+                android:paddingHorizontal="@dimen/_7sdp"
+                app:ripple_for_relative="true">
+                <ImageView android:layout_width="@dimen/_15sdp" android:layout_height="@dimen/_15sdp" android:layout_alignParentStart="true" android:layout_centerVertical="true" android:src="@drawable/ic_share" android:tint="@color/vixx_neon_purple_light" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/_23sdp" android:text="Compartilhar logs" android:textColor="@color/vixx_silver" android:textSize="@dimen/_8ssp" />
+            </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:letterSpacing="0.08"
+                android:text="VIXX"
+                android:textColor="@color/vixx_neon_purple"
+                android:textSize="@dimen/_17ssp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Main dashboard workspace -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playButtonsLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:padding="@dimen/_7sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/right_panel_start_guideline"
+        app:layout_constraintStart_toEndOf="@id/sidebar_end_guideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <!-- Selected Minecraft installation -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/version"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_94sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@drawable/vixx_home_tile_selected"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="@dimen/_13sdp"
+                android:paddingVertical="@dimen/_9sdp">
+                <ImageView
+                    android:id="@+id/versionIcon"
+                    android:layout_width="@dimen/_61sdp"
+                    android:layout_height="@dimen/_61sdp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_minecraft"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/_56sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="#664F267F"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/versionIcon"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_22sdp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/changeVersionLabel"
+                    app:layout_constraintStart_toEndOf="@id/versionIcon"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <TextView
+                        android:id="@+id/versionName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="Minecraft"
+                        android:textColor="@color/vixx_white_secondary"
+                        android:textSize="@dimen/_20ssp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/versionInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Versão selecionada"
+                        android:textColor="@color/vixx_neon_purple_light"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/changeVersionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/vixx_nav_item"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:text="Alterar  ↔"
+                    android:textColor="@color/vixx_white_secondary"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Four large quick actions -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_91sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:orientation="horizontal">
+                <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                    android:id="@+id/quickPlayButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/vixx_home_tile"
+                    android:gravity="center"
+                    app:ripple_for_relative="true">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="@dimen/_29sdp" android:layout_height="@dimen/_29sdp" android:src="@drawable/ic_vixx_play" android:tint="@color/vixx_neon_purple_light" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:text="Jogar" android:textColor="@color/vixx_white_secondary" android:textSize="@dimen/_11ssp" />
+                    </LinearLayout>
+                </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+                <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                    android:id="@+id/quickModsButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/vixx_home_tile"
+                    app:ripple_for_relative="true">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="@dimen/_29sdp" android:layout_height="@dimen/_29sdp" android:src="@drawable/ic_profile_mods" android:tint="@color/vixx_neon_purple_light" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:text="Mods" android:textColor="@color/vixx_white_secondary" android:textSize="@dimen/_11ssp" />
+                    </LinearLayout>
+                </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+                <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                    android:id="@+id/quickSkinsButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/vixx_home_tile"
+                    app:ripple_for_relative="true">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="@dimen/_29sdp" android:layout_height="@dimen/_29sdp" android:src="@drawable/ic_vixx_skin" android:tint="@color/vixx_neon_purple_light" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:text="Skins" android:textColor="@color/vixx_white_secondary" android:textSize="@dimen/_11ssp" />
+                    </LinearLayout>
+                </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+                <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                    android:id="@+id/quickAccountsButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/vixx_home_tile"
+                    app:ripple_for_relative="true">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:gravity="center" android:orientation="vertical">
+                        <ImageView android:layout_width="@dimen/_29sdp" android:layout_height="@dimen/_29sdp" android:src="@drawable/ic_vixx_user" android:tint="@color/vixx_neon_purple_light" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:text="Contas" android:textColor="@color/vixx_white_secondary" android:textSize="@dimen/_11ssp" />
+                    </LinearLayout>
+                </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+            </LinearLayout>
+
+            <!-- Welcome / information strip -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_63sdp"
+                android:background="@drawable/vixx_home_tile"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_14sdp">
+                <ImageView
+                    android:layout_width="@dimen/_27sdp"
+                    android:layout_height="@dimen/_27sdp"
+                    android:src="@drawable/ic_about"
+                    android:tint="@color/vixx_neon_purple_light" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bem-vindo ao VIXX Launcher!"
+                        android:textColor="@color/vixx_white_secondary"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sua jornada no Minecraft começa aqui."
+                        android:textColor="@color/secondary_text"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Installation and launch panel -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:background="@drawable/vixx_panel"
+        android:padding="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/right_panel_start_guideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView android:layout_width="@dimen/_24sdp" android:layout_height="@dimen/_24sdp" android:src="@drawable/ic_profile_folder" android:tint="@color/vixx_neon_purple_light" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_9sdp" android:text="Caminho de Instalação" android:textColor="@color/vixx_white_secondary" android:textSize="@dimen/_12ssp" android:textStyle="bold" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/pathText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:ellipsize="middle"
+                android:maxLines="2"
+                android:text="Carregando caminho..."
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/_10ssp" />
+            <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                android:id="@+id/openMainDirButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_43sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/vixx_nav_item"
+                android:gravity="center"
+                app:ripple_for_relative="true">
+                <ImageView android:layout_width="@dimen/_18sdp" android:layout_height="@dimen/_18sdp" android:layout_centerVertical="true" android:layout_marginStart="@dimen/_13sdp" android:src="@drawable/ic_folder" android:tint="@color/vixx_neon_purple_light" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:gravity="center" android:text="Abrir pasta" android:textColor="@color/vixx_white_secondary" android:textSize="@dimen/_11ssp" android:textStyle="bold" />
+            </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="@dimen/_14sdp" android:layout_marginBottom="@dimen/_12sdp" android:background="#554F267F" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/sideVersionIcon"
+                    android:layout_width="@dimen/_43sdp"
+                    android:layout_height="@dimen/_43sdp"
+                    android:src="@drawable/ic_minecraft"
+                    android:scaleType="fitCenter" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_9sdp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:id="@+id/selectedVersionName" android:layout_width="match_parent" android:layout_height="wrap_content" android:ellipsize="end" android:maxLines="1" android:text="Nenhuma versão" android:textColor="@color/vixx_white_secondary" android:textSize="@dimen/_12ssp" android:textStyle="bold" />
+                    <TextView android:id="@+id/selectedVersionInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:ellipsize="end" android:maxLines="1" android:text="Selecione uma instalação" android:textColor="@color/vixx_neon_purple_light" android:textSize="@dimen/_9ssp" />
+                </LinearLayout>
+                <ImageButton
+                    android:id="@+id/managerProfileButton"
+                    android:layout_width="@dimen/_39sdp"
+                    android:layout_height="@dimen/_39sdp"
+                    android:background="@drawable/vixx_nav_item"
+                    android:contentDescription="Configurações da versão"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_setting"
+                    android:tint="@color/vixx_neon_purple_light" />
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+            <com.movtery.zalithlauncher.ui.view.AnimButton
+                android:id="@+id/playButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:backgroundTint="@color/vixx_neon_purple"
+                android:minHeight="@dimen/_55sdp"
+                android:text="Iniciar Jogo"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="vixx_ds_space_1">4dp</dimen><dimen name="vixx_ds_space_2">8dp</dimen>
+    <dimen name="vixx_ds_space_3">12dp</dimen><dimen name="vixx_ds_space_4">16dp</dimen>
+    <dimen name="vixx_ds_space_5">20dp</dimen><dimen name="vixx_ds_space_6">24dp</dimen>
+    <dimen name="vixx_ds_radius_small">10dp</dimen><dimen name="vixx_ds_radius_medium">16dp</dimen>
+    <dimen name="vixx_ds_radius_large">22dp</dimen><dimen name="vixx_ds_stroke_thin">1dp</dimen>
+</resources>

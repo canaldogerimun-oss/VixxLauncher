@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- VIXX Identity: Deep Black #08080D, Neon Purple #A020F0, Silver #C6C6D0 -->
+    <color name="vixx_deep_black">#08080D</color>
+    <color name="vixx_black_secondary">#111019</color>
+    <color name="vixx_neon_purple">#A020F0</color>
+    <color name="vixx_neon_purple_light">#BF5CFF</color>
+    <color name="vixx_dark_purple">#451080</color>
+    <color name="vixx_silver">#C6C6D0</color>
+    <color name="vixx_white_secondary">#F4F0FA</color>
+
+    <color name="black_or_white">#C6C6D0</color>
+    <color name="background_app">#07060B</color>
+    <color name="background_app_error">#2D0A4A</color>
+    <color name="background_overlay">#171322</color>
+    <color name="background_status_bar">#08080D</color>
+    <color name="background_menu_top">#111019</color>
+    <color name="background_menu_top_error">#451080</color>
+    <color name="background_menu_element">#A020F0</color>
+    <color name="background_ripple_effect">#BF5CFF</color>
+    <color name="button_background">#171421</color>
+    <color name="button_background_selected">#451080</color>
+    <color name="dialog_background">#111019</color>
+    <color name="menu_bar">#111019</color>
+    <color name="menu_bar_text">#C6C6D0</color>
+    <color name="menu_overlay">#E60B0B15</color>
+    <color name="menu_progress">#A020F0</color>
+    <color name="background_item">#E6111019</color>
+    <color name="background_item_selected">#CC451080</color>
+    <color name="background_item_disabled">#66331D2B</color>
+    <color name="background_sponsor_intermediate">#CCA020F0</color>
+    <color name="background_sponsor_advanced">#CCBF5CFF</color>
+    <color name="edit_box_fill">#1C1928</color>
+    <color name="edit_box_fill_selected">#2A203D</color>
+    <color name="mod_category_fill">#665A2A80</color>
+    <color name="text_background_fill">#B3111019</color>
+    <color name="settings_category">#A020F0</color>
+    <color name="favorite_color">#A020F0</color>
+    <color name="icon_color">#C6C6D0</color>
+    <color name="primary_text">#C6C6D0</color>
+    <color name="secondary_text">#8B8B9A</color>
+</resources>

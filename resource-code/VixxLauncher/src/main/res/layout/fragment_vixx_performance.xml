@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vixx_performance_background"
+    android:fillViewport="true"
+    android:padding="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VIXX PERFORMANCE"
+            android:textColor="@color/vixx_white_secondary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Monitoramento real do dispositivo e do launcher"
+            android:textColor="@color/vixx_silver"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="112dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/vixx_ds_surface_card"
+                android:orientation="vertical"
+                android:padding="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RAM DO SISTEMA" android:textColor="@color/vixx_neon_purple_light" android:textSize="10sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/systemRamValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="-- / --" android:textColor="@color/vixx_white_secondary" android:textSize="20sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/systemRamDetail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Carregando..." android:textColor="@color/vixx_silver" android:textSize="10sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="112dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/vixx_ds_surface_card"
+                android:orientation="vertical"
+                android:padding="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PROCESSO VIXX" android:textColor="@color/vixx_neon_purple_light" android:textSize="10sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/processRamValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="-- MB" android:textColor="@color/vixx_white_secondary" android:textSize="20sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/processRamDetail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PSS do processo" android:textColor="@color/vixx_silver" android:textSize="10sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/vixx_ds_surface_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ESTADO DO DISPOSITIVO" android:textColor="@color/vixx_neon_purple_light" android:textSize="11sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/thermalValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Estado térmico: consultando..." android:textColor="@color/vixx_white_secondary" android:textSize="14sp"/>
+            <TextView android:id="@+id/batteryValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Bateria: consultando..." android:textColor="@color/vixx_white_secondary" android:textSize="14sp"/>
+            <TextView android:id="@+id/storageValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Armazenamento: consultando..." android:textColor="@color/vixx_white_secondary" android:textSize="14sp"/>
+            <TextView android:id="@+id/javaHeapValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Heap Java: consultando..." android:textColor="@color/vixx_white_secondary" android:textSize="14sp"/>
+            <TextView android:id="@+id/refreshValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Atualização automática a cada 2 segundos" android:textColor="@color/vixx_silver" android:textSize="10sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="AJUSTES DO MINECRAFT"
+            android:textColor="@color/vixx_neon_purple_light"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/openVideoSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/vixx_ds_button_primary"
+            android:gravity="center"
+            android:padding="14dp"
+            android:text="Configurações gráficas"
+            android:textColor="@color/vixx_white_secondary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/openGameSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/vixx_ds_button_secondary"
+            android:gravity="center"
+            android:padding="14dp"
+            android:text="Configurações de jogo e memória"
+            android:textColor="@color/vixx_white_secondary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Os valores são leituras do Android. Temperatura física da CPU/GPU e FPS do Minecraft só serão exibidos quando houver uma fonte confiável disponível."
+            android:textColor="@color/vixx_silver"
+            android:textSize="10sp" />
+    </LinearLayout>
+</ScrollView>

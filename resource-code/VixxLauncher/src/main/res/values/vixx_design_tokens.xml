@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="vixx_ds_background">#07060B</color><color name="vixx_ds_surface">#111019</color>
+    <color name="vixx_ds_surface_raised">#171321</color><color name="vixx_ds_surface_pressed">#21172F</color>
+    <color name="vixx_ds_border">#30203F</color><color name="vixx_ds_border_strong">#63309A</color>
+    <color name="vixx_ds_accent">#A020F0</color><color name="vixx_ds_accent_bright">#C15CFF</color>
+    <color name="vixx_ds_accent_deep">#5B16A0</color><color name="vixx_ds_text_primary">#F7F3FC</color>
+    <color name="vixx_ds_text_secondary">#AAA3B7</color><color name="vixx_ds_text_muted">#777080</color>
+    <color name="vixx_ds_success">#55D6B0</color><color name="vixx_ds_warning">#F4BE62</color>
+    <color name="vixx_ds_error">#FF667A</color>
+</resources>
