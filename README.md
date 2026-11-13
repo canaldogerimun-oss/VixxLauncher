@@ -101,16 +101,16 @@ Este projeto utiliza componentes do ZalithLauncher. Os créditos e as licenças 
 - "Relatar problemas" (https://github.com/canaldogerimun-oss/VixxLauncher/issues)
 - "Contribuir" (https://github.com/canaldogerimun-oss/VixxLauncher/pulls)
 
-🖼️IDENTIDADE VISUAL
+##🖼️IDENTIDADE VISUAL
 
-TELA INICIAL
-TelaInicial.jpg
+###TELA INICIAL
+![Tela Incial](Assets/TelaInicial.jpg)
 
-TELA DE DESEMPENHO
-TelaDesempenho.jpg
+###TELA DE DESEMPENHO
+!TelaDesempenho.jpg
 
-TELA DE VERSÕES 
-TelaVersoes.jpg
+###TELA DE VERSÕES 
+!TelaVersoes.jpg
 
 ---
 
