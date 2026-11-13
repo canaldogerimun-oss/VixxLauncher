@@ -101,6 +101,11 @@ Este projeto utiliza componentes do ZalithLauncher. Os créditos e as licenças 
 - "Relatar problemas" (https://github.com/canaldogerimun-oss/VixxLauncher/issues)
 - "Contribuir" (https://github.com/canaldogerimun-oss/VixxLauncher/pulls)
 
+🖼️IDENTIDADE VISUAL
+
+TELA INICIAL
+
+
 ---
 
 <div align="center">VIXX LAUNCHER
