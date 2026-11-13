@@ -1,15 +1,8 @@
-<div align="center">
-
 ✦ VIXX LAUNCHER
 
 Minecraft Java no Android. Do seu jeito.
 
 Um launcher independente com foco em personalização, controle e uma experiência de jogo inspirada nos launchers de PC.
-
-
-\
-
-</div>
 
 ---
 
@@ -20,6 +13,24 @@ O VIXX Launcher é um projeto de launcher para executar Minecraft: Java Edition 
 A proposta é trazer uma experiência inspirada nos launchers de computador, combinando uma interface moderna, gerenciamento do jogo, personalização e suporte à experiência com teclado e mouse.
 
 Mais do que uma simples interface, o VIXX busca construir uma experiência própria para quem gosta de jogar Minecraft Java no Android.
+
+🔍 Transparência e origem do projeto
+
+O VIXX Launcher é um projeto independente baseado no ZalithLauncher, utilizando uma base open-source como ponto de partida para seu desenvolvimento.
+
+O objetivo não é reivindicar a criação de todo o sistema do zero, mas evoluir essa base por meio de:
+
+- Desenvolvimento de uma identidade visual própria.
+- Personalização e reformulação da interface.
+- Melhorias na experiência de utilização.
+- Desenvolvimento e integração de novos recursos.
+- Estudos e otimizações voltados ao desempenho.
+
+A inteligência artificial também pode ser utilizada como ferramenta de auxílio em partes específicas do desenvolvimento, assim como outras ferramentas de programação.
+
+Isso não significa que o projeto inteiro seja gerado por IA. O VIXX é um trabalho de desenvolvimento contínuo, com decisões, modificações, testes e integração de componentes.
+
+A origem open-source do projeto é reconhecida e os créditos e licenças dos componentes originais devem ser respeitados.
 
 ✨ O que estamos construindo
 
@@ -92,9 +103,7 @@ Este projeto utiliza componentes do ZalithLauncher. Os créditos e as licenças 
 
 ---
 
-<div align="center">
-
-VIXX LAUNCHER
+<div align="center">VIXX LAUNCHER
 
 Uma nova experiência. Construída etapa por etapa.
 
