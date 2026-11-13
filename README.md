@@ -104,7 +104,13 @@ Este projeto utiliza componentes do ZalithLauncher. Os créditos e as licenças 
 🖼️IDENTIDADE VISUAL
 
 TELA INICIAL
+TelaInicial.jpg
 
+TELA DE DESEMPENHO
+TelaDesempenho.jpg
+
+TELA DE VERSÕES 
+TelaVersoes.jpg
 
 ---
 
